@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="text/javascript">
+		$("body").append("<div></div>");
+		var img = [];
+		for(var i = 0; i < 9; i++){
+			img[i] = $("<img>");
+			$(img[i]).attr("src","img/0"+(i+1)+".png");
+			$("div").append(img[i]);
+		}
+		$('img').click(function(){
+			$(this).animate({
+				"width":"+=32"
+			},
+					parseInt($(this).css('width'))
+				);
+			
+			
+		});
+
+	</script>
+</body>
+</html>
